@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px; /* 1rem = 16px */
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-color: hsl(204, 43%, 93%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 40.625rem; /* 650px */
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
+.top {
+  background-color: white;
+  padding: 2rem;
+}
+
+.top h1 {
+  color: hsl(179, 62%, 43%);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.top h2 {
+  color: hsl(71, 73%, 54%);
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
+.top p {
+  color: hsl(218, 22%, 67%);
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bottom-left,
+.bottom-right {
+  flex: 1 1 250px; /* This allows them to grow and shrink with a minimum width of 250px */
+  padding: 2rem;
+  color: white;
+}
+
+.bottom-left {
+  background-color: hsl(179, 62%, 43%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.white-dollar {
+  font-size: 2rem;
+  font-weight: bold;
+  color: hsl(204, 43%, 93%);
+}
+
+.monthly-subscription {
+  font-size: 0.875rem;
+  color: hsl(218, 25%, 76%);
+  padding-left: 0.25rem;
+}
+
+.bottom-left h3,
+.bottom-left .white-color {
+  color: hsl(204, 43%, 93%);
+}
+
+button {
+  background-color: hsl(71, 73%, 54%);
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.3125rem;
+}
+
+.bottom-right {
+  background-color: hsl(179, 42%, 55%);
+}
+
+.bottom-right ul {
+  color: hsl(203, 28%, 82%);
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 1.6;
+  font-size: 0.9375rem;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* MEDIA QUERY */
+@media (max-width: 600px) {
+  .bottom {
+    flex-direction: column;
+  }
+
+  .bottom-left,
+  .bottom-right {
+    padding: 1.5rem;
+    flex: 1 1 auto; /* This allows flexibility for both columns */
+  }
+
+  .top h1 {
+    font-size: 1.25rem;
+  }
+
+  .top h2 {
+    font-size: 1rem;
+  }
+
+  .top p,
+  .bottom-right ul {
+    font-size: 0.875rem;
+  }
+
+  .white-dollar {
+    font-size: 1.5rem;
+  }
+
+  .monthly-subscription {
+    font-size: 0.75rem;
+  }
+}
